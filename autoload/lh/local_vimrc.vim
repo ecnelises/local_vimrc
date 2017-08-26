@@ -97,7 +97,7 @@ call lh#local_vimrc#munge('blacklist', lh#path#vimfiles().'/.*')
 if         index(g:local_vimrc_options.whitelist,   $HOME) < 0
       \ && index(g:local_vimrc_options.blacklist,   $HOME) < 0
       \ && index(g:local_vimrc_options.sandboxlist, $HOME) < 0
-  call lh#local_vimrc#munge('asklist', $HOME)
+  call lh#local_vimrc#munge('whitelist', $HOME)
 endif
 call lh#local_vimrc#munge('blacklist', fnamemodify('/', ':p'))
 " The directories where projects (we trust) are stored shall be added into
